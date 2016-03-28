@@ -117,14 +117,14 @@
                 </p>
               </div>
               <div class="col-md-6 imgright" id="adjust1">
-                <img src="img/article4.jpg" height="500px">
-                <img id="abs-article" src="img/article3.jpeg" height="150px">
+                <img src="img/article4.jpg" height="450px" class="hiden">
+                <img id="abs-article" src="img/article3.jpeg" height="150px" class="hiden">
               </div>
         </div>
         <div class="col-md-12 paddtop">
             <div class="col-md-6 imgright" id="adjust2">
-              <img src="img/article5.jpg" height="450px">
-              <img id="abs-article2" src="img/article6.jpeg" height="150px">
+              <img src="img/article5.jpg" height="450px" class="hiden">
+              <img id="abs-article2" src="img/article6.jpeg" height="150px" class="hiden">
             </div>
             <div class="col-md-6 textright">
               <h2>Pourriez vous nous en dire plus sur les matériaux, ainsi que votre parti pris pour la déco avec cette cheminée ?</h2>
@@ -135,12 +135,95 @@
             </p>
             </div>
       </div>
+      <div class="col-xs-12 col-md-12 gallery">
+        <div class="col-xs-3 col-md-3">
+          <a href="#" data-toggle="modal" data-target=".pop-up-1">
+            <img src="img/article2.jpeg" width="150" class="img-responsive center-block" alt="">
+          </a>
+        </div>
+        <div class="col-xs-3 col-md-3">
+          <a href="#" data-toggle="modal" data-target=".pop-up-2">
+            <img src="img/article4.jpeg" width="150" class="img-responsive center-block" alt="">
+          </a>
+        </div>
+        <div class="col-xs-3 col-md-3">
+          <a href="#" data-toggle="modal" data-target=".pop-up-3">
+            <img src="img/article5.jpeg" width="150" class="img-responsive center-block" alt="">
+          </a>
+        </div>
+        <div class="col-xs-3 col-md-3">
+          <a href="#" data-toggle="modal" data-target=".pop-up-4">
+            <img src="img/article6.jpeg" width="150" class="img-responsive center-block" alt="">
+          </a>
+        </div>
+      </div>
+      <!--  Modal content for the mixer image example -->
+  <div class="modal fade pop-up-1" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+          <h4 class="modal-title" id="myLargeModalLabel-1">Chambre</h4>
+        </div>
+        <div class="modal-body">
+        <img src="img/article2.jpeg" class="img-responsive center-block" alt="">
+        </div>
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div><!-- /.modal mixer image -->
+
+  <!--  Modal content for the lion image example -->
+  <div class="modal fade pop-up-2" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel-2" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+          <h4 class="modal-title" id="myLargeModalLabel-2">Terasse</h4>
+        </div>
+        <div class="modal-body">
+          <img src="img/article4.jpeg" class="img-responsive center-block" alt="">
+        </div>
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div><!-- /.modal mixer image -->
+  <!--  Modal content for the mixer image example -->
+  <div class="modal fade pop-up-3" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel-3" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+          <h4 class="modal-title" id="myLargeModalLabel-3">Extérieur</h4>
+        </div>
+        <div class="modal-body">
+          <img src="img/article5.jpeg" class="img-responsive center-block" alt="">
+        </div>
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div><!-- /.modal mixer image -->
+
+  <!--  Modal content for the lion image example -->
+  <div class="modal fade pop-up-4" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel-4" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+          <h4 class="modal-title" id="myLargeModalLabel-4">Cheminée</h4>
+        </div>
+        <div class="modal-body">
+          <img src="img/article6.jpeg" class="img-responsive center-block" alt="">
+        </div>
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div><!-- /.modal mixer image -->
+
       <div class="col-md-12 thx">
         <p>
           L'équipe de HomeTain vous remerci beaucoup pour cet entretien. <br/>
           On espère vous revoir très bientôt pour une nouvelle interview.
         </p>
     </div>
+
         </div>
         <!-- /.row -->
       </div>
@@ -149,7 +232,7 @@
         <footer>
             <div class="footer container">
                 <div class="row">
-                    <div class="col-lg-4 post">
+                    <div class="col-lg-4 col-md-4 col-xs-6 post">
                         <h1>Contact us</h1>
                         <p>
                             contact@hometain.com<br />
@@ -158,12 +241,12 @@
                             FRANCE
                         </p>
                     </div>
-                    <div class="col-lg-4 post" id="paddtop">
+                    <div class="col-lg-4 col-md-4 post hidd" id="paddtop">
                         <p>
                             The moutain is your new home
                         </p>
                     </div>
-                    <div class="col-lg-4 post">
+                    <div class="col-lg-4 col-md-4 col-xs-6 post">
                         <h1>Get the updates</h1>
                         <p>Join the newsletter</p>
                         <form method="post" action="index.html" class="cbp-mc-form2">
@@ -174,7 +257,7 @@
                             </div>
                         </form>
                     </div>
-                    <div class="col-lg-12 center">
+                    <div class="col-lg-12 col-md-12 col-xs-12 center">
                         <img src="img/logo.png" height ="100px">
                     </div>
                 </div>
