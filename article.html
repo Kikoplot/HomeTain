@@ -28,6 +28,7 @@
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
     <script src="js/resize.js"></script>
+    <script src="js/moveImg.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
@@ -35,7 +36,47 @@
 
 
 <body id="body-article">
+  <script>
+  	jQuery('body').css('display','none');
+  	jQuery(document).ready(function() {
+  		jQuery('body').fadeIn();
+      jQuery('a.fadein').on('click',function(event){
+  			var thetarget = this.getAttribute('target')
+  			if (thetarget != "_blank"){
+  				var thehref = this.getAttribute('href')
+  				event.preventDefault();
+  				jQuery('body').fadeOut(function(){
+  					//alert(thehref)
+  					window.location = thehref
+  				});
+  			}
+  		});
+  	});
+  	setTimeout(function(){
+  		jQuery('body').fadeIn();
+  	},2000)
+  </script>
+  <script>
+  // Create cross browser requestAnimationFrame method:
+ window.requestAnimationFrame = window.requestAnimationFrame
+  || window.mozRequestAnimationFrame
+  || window.webkitRequestAnimationFrame
+  || window.msRequestAnimationFrame
+  || function(f){setTimeout(f, 1000/60)}
 
+ var img1 = document.getElementById('test')
+ var img2 = document.getElementById('test2')
+
+ function parallax(){
+  var scrolltop = window.pageYOffset // get number of pixels document has scrolled vertically
+  test.style.top = -scrolltop * 0.2 + 'px' // move bubble1 at 20% of scroll rate
+  test2.style.top = scrolltop * 0.2 + 'px' // move bubble1 at 20% of scroll rate
+ }
+
+ window.addEventListener('scroll', function(){ // on page scroll
+  requestAnimationFrame(parallax) // call parallaxbubbles() on next available screen paint
+ }, false)
+</script>
     <!-- Navigation -->
     <nav class="navbar navbar-inverse navbar-fixed-top menu" role="navigation">
         <div class="container">
@@ -52,16 +93,19 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <li>
-                      <a href="#" id="menulogo"><img src="img/favicon.png" height="50px"></a>
+                      <a class="fadein" href="index.html" id="menulogo">	<div id="logoarticlefinal_hype_container" style="margin:auto;position:relative;width:540px;height:170px;overflow:hidden;" aria-live="polite">
+                      		<script type="text/javascript" charset="utf-8" src="logo-article-final.hyperesources/logoarticlefinal_hype_generated_script.js?70368"></script>
+                      	</div>
+                      </a>
                     </li>
                     <li>
-                        <a href="#">Articles</a>
+                        <a class="fadein" href="rubrique.html">Articles</a>
                     </li>
                     <li>
-                        <a href="#">Interviews</a>
+                        <a class="fadein" href="rubrique.html">Interviews</a>
                     </li>
                     <li>
-                        <a href="#">Contact</a>
+                        <a class="fadein" href="index.html#anchor-contact">Contact</a>
                     </li>
                 </ul>
                 <ul class="nav navbar-nav" id="social">
@@ -72,7 +116,7 @@
                     <a href="#" id="menulogo"><img src="img/twitter.png" height="25px"></a>
                   </li>
                   <li>
-                    <a href="#" id="menulogo"><img src="img/tumblr.png" height="25px"></a>
+                    <a href="http://homeltain.tumblr.com/" target="_blank" id="menulogo"><img src="img/tumblr.png" height="25px"></a>
                   </li>
                 </ul>
             </div>
@@ -80,7 +124,22 @@
         </div>
         <!-- /.container -->
     </nav>
+    <div class="button_container" id="toggle">
+      <span class="top"></span>
+      <span class="middle"></span>
+      <span class="bottom"></span>
+    </div>
 
+    <div class="overlay" id="overlay">
+      <nav class="overlay-menu">
+        <ul>
+          <li ><a href="#">Accueil</a></li>
+          <li><a href="#">Articles</a></li>
+          <li><a href="#">Interviews</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+      </div>
     <!-- Page Content -->
     <div class="container">
 
@@ -118,14 +177,19 @@
               </div>
               <div class="col-md-6 imgright" id="adjust1">
                 <img src="img/article4.jpg" height="450px" class="hiden">
-                <img id="abs-article" src="img/article3.jpeg" height="150px" class="hiden">
+                <div id="test">
+                  <img id="abs-article" src="img/article3.jpeg" height="150px" class="hiden">
+                </div>
               </div>
         </div>
         <div class="col-md-12 paddtop">
             <div class="col-md-6 imgright" id="adjust2">
               <img src="img/article5.jpg" height="450px" class="hiden">
-              <img id="abs-article2" src="img/article6.jpeg" height="150px" class="hiden">
+              <div id="test2">
+                <img id="abs-article2" src="img/article6.jpeg" height="150px" class="hiden">
+              </div>
             </div>
+
             <div class="col-md-6 textright">
               <h2>Pourriez vous nous en dire plus sur les matériaux, ainsi que votre parti pris pour la déco avec cette cheminée ?</h2>
               <p><small>Déca-Laage :</small> Nous avons suivi le souhait du propriétaire d'avoir un intérieur contemporain et lumineux. Nous avons donc opté pour un béton ciré blanc au sol et des planches d'épicéa blanchi pour les murs. La charpente d'origine, en bois, est laissée naturelle. Nous aimons privilégier les matériaux locaux et avons choisi un granit pour le plan de travail de la cuisine et pour la base de la cheminée.
@@ -263,9 +327,12 @@
                 </div>
             </div>
         </footer>
-
-
-
+    <script>
+        $('#toggle').click(function() {
+        $(this).toggleClass('active');
+        $('#overlay').toggleClass('open');
+      });
+    </script>
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
 

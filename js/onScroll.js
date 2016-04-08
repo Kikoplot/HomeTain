@@ -1,5 +1,6 @@
 $("document").ready(function($){
     var nav = $('#anchor-article');
+    var fix = $('#ancrearticle');
     var nav2 = $('#anchor-interview');
     var nav3 = $('#anchor-contact');
     $(window).scroll(function () {

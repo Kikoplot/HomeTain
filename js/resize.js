@@ -18,6 +18,10 @@ $(document).ready(function() {
       left:($(window).width() - $("#info3").outerWidth()) / 1.2,
       top:($(window).height() - $("#info3").outerHeight()) / 4
     });
+    $(".mouse_scroll").css({
+      left:($(window).width() - $("#info3").outerWidth()) / 2.1,
+      top:($(window).height() - $("#info3").outerHeight()) / 1.2
+    });
     $("#menu").css({
       top:($(window).height() - $("#info3").outerHeight()) / 2.1
     });

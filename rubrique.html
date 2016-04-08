@@ -36,7 +36,26 @@
 
 
 <body id="body-article">
-
+  <script>
+  	jQuery('body').css('display','none');
+  	jQuery(document).ready(function() {
+  		jQuery('body').fadeIn();
+      jQuery('a.fadein').on('click',function(event){
+  			var thetarget = this.getAttribute('target')
+  			if (thetarget != "_blank"){
+  				var thehref = this.getAttribute('href')
+  				event.preventDefault();
+  				jQuery('body').fadeOut(function(){
+  					//alert(thehref)
+  					window.location = thehref
+  				});
+  			}
+  		});
+  	});
+  	setTimeout(function(){
+  		jQuery('body').fadeIn();
+  	},2000)
+  </script>
     <!-- Navigation -->
     <nav class="navbar navbar-inverse navbar-fixed-top menu" role="navigation">
         <div class="container">
@@ -51,20 +70,22 @@
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
-                    <li>
-                      <a href="#" id="menulogo"><img src="img/favicon.png" height="50px"></a>
-                    </li>
-                    <li>
-                        <a href="#">Articles</a>
-                    </li>
-                    <li>
-                        <a href="#">Interviews</a>
-                    </li>
-                    <li>
-                        <a href="#">Contact</a>
-                    </li>
-                </ul>
+              <ul class="nav navbar-nav">
+                  <li>
+                    <a class="fadein" href="index.html" id="menulogo">	<div id="logoarticlefinal_hype_container" style="margin:auto;position:relative;width:540px;height:170px;overflow:hidden;" aria-live="polite">
+                        <script type="text/javascript" charset="utf-8" src="logo-article-final.hyperesources/logoarticlefinal_hype_generated_script.js?70368"></script>
+                      </div>
+                    </a>
+                  <li>
+                      <a class="fadein" href="rubrique.html">Articles</a>
+                  </li>
+                  <li>
+                      <a class="fadein" href="rubrique.html">Interviews</a>
+                  </li>
+                  <li>
+                      <a class="fadein" href="index.html#anchor-contact">Contact</a>
+                  </li>
+              </ul>
                 <ul class="nav navbar-nav" id="social">
                   <li>
                     <a href="#" id="menulogo"><img src="img/facebook.png" height="25px"></a>
@@ -73,7 +94,7 @@
                     <a href="#" id="menulogo"><img src="img/twitter.png" height="25px"></a>
                   </li>
                   <li>
-                    <a href="#" id="menulogo"><img src="img/tumblr.png" height="25px"></a>
+                    <a href="http://homeltain.tumblr.com/" target="_blank" id="menulogo"><img src="img/tumblr.png" height="25px"></a>
                   </li>
                 </ul>
             </div>
@@ -81,6 +102,23 @@
         </div>
         <!-- /.container -->
     </nav>
+
+    <div class="button_container" id="toggle">
+      <span class="top"></span>
+      <span class="middle"></span>
+      <span class="bottom"></span>
+    </div>
+
+    <div class="overlay" id="overlay">
+      <nav class="overlay-menu">
+        <ul>
+          <li ><a href="#">Accueil</a></li>
+          <li><a href="#">Articles</a></li>
+          <li><a href="#">Interviews</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+      </div>
 
     <!-- Page Content -->
     <div class="grid container">
@@ -102,148 +140,387 @@
             <p>Retrouvez nos différents articles, tests et interviews sur cette page. Une avalanche de d'images pour sublimer vos yeux comme le ferait le soleil réfléchit sur la poudreuse. Des photographies inédites de chalets hors du commun ainsi que des interviews des plus grand du milieu.</p>
           </div>
           <div class="col-lg-12">
-            <div class="col-lg-2 col-lg-offset-2 col-sm-3 col-xs-6 col-sm-3  rubtest smallcol">
-              <img src="img/rub1.jpg">
-              <h1>Visite Avoriaz</h1>
-
-            </div>
-            <div class="col-lg-2 col-xs-6 col-sm-3  rubtest smallcol">
-              <img src="img/rub2.jpg">
-              <h1>Visite Avoriaz</h1>
-
-            </div>
-            <div class="col-lg-4 col-xs-6 col-sm-3  rubtest">
+            <div class="col-lg-2 col-lg-offset-2 col-sm-3 col-xs-6 col-sm-3 col-sm-offset-3 rubtest smallcol">
+              <a href="">
               <img src="img/rub3.jpg">
+              <div class="box-caption">
+                <div class="box-caption-content">
+                    <div class="project-category text-faded">
+                      Visite
+                    </div>
+                    <div class="project-name">
+                      Châlet à Avoriaz.
+                    </div>
+                  </div>
+                </div>
+              </a>
               <h1>Visite Avoriaz</h1>
-
             </div>
             <div class="col-lg-2 col-xs-6 col-sm-3  rubtest smallcol">
-              <img src="img/rub4.jpg">
-              <h1>Visite Avoriaz</h1>
-
+              <a href="">
+              <img src="img/rub2.jpg">
+              <div class="box-caption">
+                <div class="box-caption-content">
+                    <div class="project-category text-faded">
+                      Test
+                    </div>
+                    <div class="project-name">
+                      Chaise Lebrove jardin.
+                    </div>
+                  </div>
+                </div>
+              </a>
+              <h1>Chaise Lebrove</h1>
+            </div>
+            <div class="col-lg-4 col-xs-6 col-sm-6 rubtest">
+              <a href="">
+              <img src="img/rub1.jpg">
+              <div class="box-caption">
+                <div class="box-caption-content">
+                    <div class="project-category text-faded">
+                      Interview
+                    </div>
+                    <div class="project-name">
+                      Designer industriel.
+                    </div>
+                  </div>
+                </div>
+              </a>
+              <h1>Marcel Wanders</h1>
+            </div>
+            <div class="col-lg-2 col-xs-6 col-sm-3  rubtest smallcol blank hiddensmall">
             </div>
           </div>
           <div class="col-lg-12 marginalign">
             <div class="col-lg-2 col-xs-6 col-sm-3  rubtest smallcol">
-              <img src="img/rub5.jpg">
-              <h1>Visite Avoriaz</h1>
-
+              <a href="">
+              <img src="img/rub8.jpg">
+              <div class="box-caption">
+                <div class="box-caption-content">
+                    <div class="project-category text-faded">
+                      Visite
+                    </div>
+                    <div class="project-name">
+                      Châlet aux Menuires.
+                    </div>
+                  </div>
+                </div>
+              </a>
+              <h1>Visite Menuires</h1>
             </div>
             <div class="col-lg-4 col-xs-6 col-sm-3  rubtest smallcol">
-              <img src="img/rub11.jpg">
-              <h1>Visite Avoriaz</h1>
-
+              <a href="">
+              <img src="img/rub5.jpg">
+              <div class="box-caption">
+                <div class="box-caption-content">
+                    <div class="project-category text-faded">
+                      Interview
+                    </div>
+                    <div class="project-name">
+                      Architecte
+                    </div>
+                  </div>
+                </div>
+              </a>
+              <h1>Ross Legrove</h1>
             </div>
             <div class="col-lg-2 col-lg-offset-4 col-xs-6 col-sm-3  rubtest smallcol">
-              <img src="img/rub7.jpg">
-              <h1>Visite Avoriaz</h1>
-
+              <a href="">
+              <img src="img/rub9.jpg">
+              <div class="box-caption">
+                <div class="box-caption-content">
+                    <div class="project-category text-faded">
+                      Visite
+                    </div>
+                    <div class="project-name">
+                      Châlet à Gap.
+                    </div>
+                  </div>
+                </div>
+              </a>
+              <h1>Visite Gap</h1>
             </div>
           </div>
           <div class="col-lg-12 marginalign">
-            <div class="col-lg-2 col-xs-6 col-sm-3  rubtest smallcol">
-              <img src="img/rub7.jpg">
-              <h1>Visite Avoriaz</h1>
-
+            <div class="col-lg-2 col-xs-6 col-sm-3  rubtest smallcol blank">
             </div>
-            <div class="col-lg-2 col-xs-6 col-sm-3  col-lg-offset-4 rubtest smallcol">
-              <img src="img/rub8.jpg">
-              <h1>Visite Avoriaz</h1>
-
+            <div class="col-lg-2 col-xs-12 col-sm-3  col-lg-offset-4 rubtest smallcol">
+              <a href="">
+              <img src="img/rub11.jpg">
+              <div class="box-caption">
+                <div class="box-caption-content">
+                    <div class="project-category text-faded">
+                      Visite
+                    </div>
+                    <div class="project-name">
+                      Châlet à Serres.
+                    </div>
+                  </div>
+                </div>
+              </a>
+              <h1>Visite Serres</h1>
             </div>
-            <div class="col-lg-4 col-xs-6 col-sm-3  rubtest smallcol text">
+            <div class="col-lg-4 col-xs-12 col-sm-6 rubtest smallcol text">
               <h1>Une visite inédite des coulisses du jazz festival de Montreux.</h1>
             </div>
           </div>
           <div class="col-lg-12">
             <div class="col-lg-offset-2 col-lg-2 col-xs-6 col-sm-3  rubtest smallcol">
-              <img src="img/rub1.jpg">
-              <h1>Visite Avoriaz</h1>
-
+              <a href="">
+              <img src="img/rub10.jpg">
+              <div class="box-caption">
+                <div class="box-caption-content">
+                    <div class="project-category text-faded">
+                      Visite
+                    </div>
+                    <div class="project-name">
+                      Châlet à Maubeuge.
+                    </div>
+                  </div>
+                </div>
+              </a>
+              <h1>Visite Alpes</h1>
             </div>
             <div class="col-lg-2 col-xs-6 col-sm-3  rubtest smallcol">
-              <img src="img/rub2.jpg">
-              <h1>Visite Avoriaz</h1>
-
+              <a href="">
+              <img src="img/rub4.jpg">
+              <div class="box-caption">
+                <div class="box-caption-content">
+                    <div class="project-category text-faded">
+                      Test
+                    </div>
+                    <div class="project-name">
+                      Cheminée de salon.
+                    </div>
+                  </div>
+                </div>
+              </a>
+              <h1>Cheminée Heck</h1>
+            </div>
+            <div class="col-lg-2 col-lg-offset-0 col-xs-6 col-sm-3 col-sm-offset-3 rubtest smallcol">
+              <a href="">
+              <img src="img/rub13.jpg">
+              <div class="box-caption">
+                <div class="box-caption-content">
+                    <div class="project-category text-faded">
+                      Test
+                    </div>
+                    <div class="project-name">
+                      Chaise oeufà balancelle.
+                    </div>
+                  </div>
+                </div>
+              </a>
+              <h1>Chaise Oeuf</h1>
             </div>
             <div class="col-lg-2 col-xs-6 col-sm-3  rubtest smallcol">
-              <img src="img/rub3.jpg">
-              <h1>Visite Avoriaz</h1>
-
-            </div>
-            <div class="col-lg-2 col-xs-6 col-sm-3  rubtest smallcol">
-              <img src="img/rub3.jpg">
-              <h1>Visite Avoriaz</h1>
-
+              <a href="">
+              <img src="img/rub14.jpg">
+              <div class="box-caption">
+                <div class="box-caption-content">
+                    <div class="project-category text-faded">
+                      Visite
+                    </div>
+                    <div class="project-name">
+                      Châlet à Tallard.
+                    </div>
+                  </div>
+                </div>
+              </a>
+              <h1>Visite Tallard</h1>
             </div>
           </div>
           <div class="col-lg-12">
             <div class="col-lg-2 col-xs-6 col-sm-3  rubtest smallcol">
-              <img src="img/rub2.jpg">
-              <h1>Visite Avoriaz</h1>
-
+              <a href="">
+              <img src="img/rub15.jpg">
+              <div class="box-caption">
+                <div class="box-caption-content">
+                    <div class="project-category text-faded">
+                      Visite
+                    </div>
+                    <div class="project-name">
+                      Châlet à Vars.
+                    </div>
+                  </div>
+                </div>
+              </a>
+              <h1>Visite Vars</h1>
             </div>
             <div class="col-lg-2 col-xs-6 col-sm-3  rubtest smallcol">
-              <img src="img/rub3.jpg">
-              <h1>Visite Avoriaz</h1>
-
+              <a href="">
+              <img src="img/rub16.jpg">
+              <div class="box-caption">
+                <div class="box-caption-content">
+                    <div class="project-category text-faded">
+                      Visite
+                    </div>
+                    <div class="project-name">
+                      Châlet à Neffes.
+                    </div>
+                  </div>
+                </div>
+              </a>
+              <h1>Visite Neffes</h1>
             </div>
             <div class="col-lg-2 col-xs-6 col-sm-3  rubtest smallcol">
-              <img src="img/rub3.jpg">
-              <h1>Visite Avoriaz</h1>
-
+              <a href="">
+              <img src="img/rub17.jpg">
+              <div class="box-caption">
+                <div class="box-caption-content">
+                    <div class="project-category text-faded">
+                      Visite
+                    </div>
+                    <div class="project-name">
+                      Châlet à Saulce.
+                    </div>
+                  </div>
+                </div>
+              </a>
+              <h1>Visite Saulce</h1>
             </div>
-            <div class="col-lg-2 col-xs-6 col-sm-3  rubtest smallcol text">
-              <h1>Visite Avoriaz</h1>
-              <p>usmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.</p>
+            <div class="col-lg-2 col-xs-6 col-sm-3  rubtest smallcol text blank">
             </div>
             <div class="col-lg-4 col-xs-6 col-sm-3  rubtest">
-              <img src="img/rub3.jpg">
-              <h1>Visite Avoriaz</h1>
-
+              <a href="">
+              <img src="img/rub6.jpg">
+              <div class="box-caption">
+                <div class="box-caption-content">
+                    <div class="project-category text-faded">
+                      Interview
+                    </div>
+                    <div class="project-name">
+                      Designer et innovateur.
+                    </div>
+                  </div>
+                </div>
+              </a>
+              <h1>Marc Newson</h1>
             </div>
           </div>
           <div class="col-lg-12 marginalign">
             <div class="col-lg-2 col-xs-6 col-sm-3  col-lg-offset-2 rubtest smallcol">
-              <img src="img/rub3.jpg">
-              <h1>Visite Avoriaz</h1>
+              <a href="">
+              <img src="img/rub18.jpg">
+              <div class="box-caption">
+                <div class="box-caption-content">
+                    <div class="project-category text-faded">
+                      Visite
+                    </div>
+                    <div class="project-name">
+                      Châlet à Savines.
+                    </div>
+                  </div>
+                </div>
+              </a>
+              <h1>Visite Savines</h1>
             </div>
-            <div class="col-lg-4 col-xs-6 col-sm-3  rubtest">
-              <img src="img/rub3.jpg">
-              <h1>Visite Avoriaz</h1>
+            <div class="col-lg-4 col-xs-6 col-sm-6 rubtest">
+              <a href="">
+              <img src="img/rub7.jpg">
+              <div class="box-caption">
+                <div class="box-caption-content">
+                    <div class="project-category text-faded">
+                      Interview
+                    </div>
+                    <div class="project-name">
+                      Designer et créateur.
+                    </div>
+                  </div>
+                </div>
+              </a>
+              <h1>Philippe Starck</h1>
             </div>
           </div>
           <div class="col-lg-12 marginalign">
             <div class="col-lg-2 col-xs-6 col-sm-3  col-lg-offset-2 rubtest smallcol">
-              <img src="img/rub3.jpg">
-              <h1>Visite Avoriaz</h1>
+              <a href="">
+              <img src="img/rub19.jpg">
+              <div class="box-caption">
+                <div class="box-caption-content">
+                    <div class="project-category text-faded">
+                      Visite
+                    </div>
+                    <div class="project-name">
+                      Châlet à Orcières.
+                    </div>
+                  </div>
+                </div>
+              </a>
+              <h1>Visite Orcières</h1>
             </div>
             <div class="col-lg-2 col-lg-offset-4 col-xs-6 col-sm-3  rubtest">
-              <img src="img/rub3.jpg">
-              <h1>Visite Avoriaz</h1>
+              <a href="">
+              <img src="img/rub20.jpg">
+              <div class="box-caption">
+                <div class="box-caption-content">
+                    <div class="project-category text-faded">
+                      Visite
+                    </div>
+                    <div class="project-name">
+                      Châlet à Crots.
+                    </div>
+                  </div>
+                </div>
+              </a>
+              <h1>Visite Crots</h1>
             </div>
           </div>
           <div class="col-lg-12">
-            <div class="col-lg-4 col-xs-6 col-sm-3  rubtest smallcol text">
-              <h1>Une visite inédite des coulisses du jazz festival de Montreux.</h1>
+            <div class="col-lg-4 col-xs-12 col-sm-6  rubtest smallcol text" style="text-align: right;">
+              <h1>Le "Passe Montagne", un restaurant atypique à découvrir.</h1>
             </div>
             <div class="col-lg-2 col-xs-6 col-sm-3  rubtest">
-              <img src="img/rub3.jpg">
-              <h1>Visite Avoriaz</h1>
+              <a href="">
+              <img src="img/rub21.jpg">
+              <div class="box-caption">
+                <div class="box-caption-content">
+                    <div class="project-category text-faded">
+                      Visite
+                    </div>
+                    <div class="project-name">
+                      Châlet à Risoul.
+                    </div>
+                  </div>
+                </div>
+              </a>
+              <h1>Visite Risoul</h1>
             </div>
             <div class="col-lg-4 col-xs-6 col-sm-3  rubtest">
-              <img src="img/rub3.jpg">
-              <h1>Visite Avoriaz</h1>
+              <a href="">
+              <img src="img/rub12.jpg">
+              <div class="box-caption">
+                <div class="box-caption-content">
+                    <div class="project-category text-faded">
+                      Interview
+                    </div>
+                    <div class="project-name">
+                      Designer pour Apple.
+                    </div>
+                  </div>
+                </div>
+              </a>
+              <h1>jonathan Ive</h1>
             </div>
-            <div class="col-lg-2 col-xs-6 col-sm-3  rubtest smallcol">
-              <img src="img/rub3.jpg">
-              <h1>Visite Avoriaz</h1>
+            <div class="col-lg-2 col-lg-offset-0 col-xs-6 col-sm-3 col-md-offset-3 rubtest smallcol">
+              <a href="">
+              <img src="img/rub22.jpg">
+              <div class="box-caption">
+                <div class="box-caption-content">
+                    <div class="project-category text-faded">
+                      Visite
+                    </div>
+                    <div class="project-name">
+                      Châlet à Poët.
+                    </div>
+                  </div>
+                </div>
+              </a>
+              <h1>Visite Poët</h1>
             </div>
           </div>
           <div class="col-lg-12 marginalign">
-            <div class="col-lg-2 col-lg-offset-4 col-xs-6 col-sm-3  rubtest smallcol">
-              <h1>Visite Avoriaz</h1>
-              <p>usmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.</p>
+            <div class="col-lg-2 col-lg-offset-4 col-xs-6 col-sm-3  rubtest smallcol blank">
             </div>
           </div>
             <!-- Blog Entries Column -->
@@ -256,7 +533,7 @@
         <footer>
             <div class="footer container">
                 <div class="row">
-                    <div class="col-lg-4">
+                    <div class="col-lg-4 col-md-4 col-xs-6 post">
                         <h1>Contact us</h1>
                         <p>
                             contact@hometain.com<br />
@@ -265,12 +542,12 @@
                             FRANCE
                         </p>
                     </div>
-                    <div class="col-lg-4" id="paddtop">
+                    <div class="col-lg-4 col-md-4 post hidd" id="paddtop">
                         <p>
                             The moutain is your new home
                         </p>
                     </div>
-                    <div class="col-lg-4">
+                    <div class="col-lg-4 col-md-4 col-xs-6 post">
                         <h1>Get the updates</h1>
                         <p>Join the newsletter</p>
                         <form method="post" action="index.html" class="cbp-mc-form2">
@@ -281,15 +558,19 @@
                             </div>
                         </form>
                     </div>
-                    <div class="col-lg-12 center">
+                    <div class="col-lg-12 col-md-12 col-xs-12 center">
                         <img src="img/logo.png" height ="100px">
                     </div>
                 </div>
             </div>
         </footer>
 
-
-
+        <script>
+            $('#toggle').click(function() {
+            $(this).toggleClass('active');
+            $('#overlay').toggleClass('open');
+          });
+        </script>
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
 

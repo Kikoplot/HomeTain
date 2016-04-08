@@ -38,12 +38,37 @@
 
 <body>
 
+  <script>
+$(document).ready(function() {
+    $('body').fadeIn(3000);
+  });
+    </script>
+  <script>
+  	jQuery('body').css('display','none');
+  	jQuery(document).ready(function() {
+  		jQuery('body').fadeIn();
+  		jQuery('a.fadein').on('click',function(event){
+  			var thetarget = this.getAttribute('target')
+  			if (thetarget != "_blank"){
+  				var thehref = this.getAttribute('href')
+  				event.preventDefault();
+  				jQuery('body').fadeOut(function(){
+  					//alert(thehref)
+  					window.location = thehref
+  				});
+  			}
+  		});
+  	});
+  	setTimeout(function(){
+  		jQuery('body').fadeIn();
+  	},2000)
+  </script>
     <!-- Full Page Image Background Carousel Header -->
     <div id="menu">
         <ul>
-            <li><a class="js-scrollTo link link--kukuri" href="#anchor-article">Articles</a></li>
-            <li><a class="js-scrollTo link link--kukuri" href="#anchor-interview">Interviews</a></li>
-            <li><a class="js-scrollTo link link--kukuri" href="#anchor-contact">Contact</a></li>
+            <li><a class="js-scrollTo link link--kukuri" href="#ancrearticle">Articles</a></li>
+            <li><a class="js-scrollTo link link--kukuri" href="#ancreinterview">Interviews</a></li>
+            <li><a class="js-scrollTo link link--kukuri" href="#ancrecontact">Contact</a></li>
         </ul>
     </div>
     <header id="myCarousel" class="carousel slide">
@@ -52,23 +77,16 @@
         <div class="carousel-inner">
             <div class="item active">
                 <!-- Set the first background image using inline CSS below. -->
-                <div class="fill" style="background-image:url('img/bgtest.jpg');">
+                <div class="fill" style="background-image:url('img/indexbg.jpg');">
                     <div id="monbloc">
                         <!-- Container text-->
                         <div class="col-lg-12 title">
                             <p>The moutain is your new home</p>
-                            <h1>HOME|TAIN</h1>
+                            <div id="logoindexfinal_hype_container" style="margin:auto;position:relative;width:750px;height:200px;overflow:hidden;" aria-live="polite">
+                          		<script type="text/javascript" charset="utf-8" src="logo-index-final.hyperesources/logoindexfinal_hype_generated_script.js?81639"></script>
+                          	</div>
                         </div>
-                        <!--
-                        <div class="col-lg-12 description">
-                            HomeTain est une avalanche d’inspiration et d’idées déco pour les maisons qui surplombent les autres.<br />
-                            Nous vous proposons une approche du secteur au travers d’un regard plus jeune, plus moderne, plus solennel.<br />
-                            Nous n’avons pas peur du hors piste pour proposer des choses novuelles à ses lecteus.
-                        </div>
-                      -->
-                        <div id="mute">
-                            <img onclick="stopMusic()" src="img/mute.png">
-                        </div>
+<!--
                         <div id="info1">
                             789 articles.
                         </div>
@@ -78,12 +96,18 @@
                         <div id="info3">
                             18 pays.
                         </div>
+                      -->
+                      <div class="mouse_scroll">
+                      		<div class="mouse">
+                      			<div class="wheel"></div>
+                      		</div>
+                      </div>
                     </div>
                 </div>
             </div>
         </div>
     </header>
-
+    <div id="ancrearticle" style="position:absolute;"></div>
     <div id="anchor-article" class="title-article">
         <h1>Articles,</h1>
     </div>
@@ -91,49 +115,49 @@
     <div class="grid container index padding">
         <div id="posts">
             <div class="row">
-                <div class="col-lg-4 article post index">
+                <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 article post index">
                     <img src="img/art1.png" width="100%">
                     <h1>Visite Avoriaz</h1>
                     <p>Vendredi 14 février, nous avons visité le chalet de la famille Dumont situé à Avoriaz. D’un style que l’on pourrait qualifier de forestier, très proche de la nature nous retrouvons immédiatement le chalet dans sa nature la plus «primaire».</p>
-                    <a href="#">SUITE<img src="img/suite.png"></a>
+                    <a class="fadein" href="article.html">SUITE<img src="img/suite.png"></a>
                 </div>
-                <div class="col-lg-4 article post index">
+                <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 article post index">
                   <img src="img/art2.png" width="100%">
                     <h1>Visite Avoriaz</h1>
                     <p>Vendredi 14 février, nous avons visité le chalet de la famille Dumont situé à Avoriaz. D’un style que l’on pourrait qualifier de forestier, très proche de la nature nous retrouvons immédiatement le chalet dans sa nature la plus «primaire».</p>
-                    <a href="#">SUITE<img src="img/suite.png"></a>
+                    <a class="fadein" href="article.html">SUITE<img src="img/suite.png"></a>
                 </div>
-                <div class="col-lg-4 article post index">
+                <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 article post index">
                   <img src="img/art3.png" width="100%">
                     <h1>Visite Avoriaz</h1>
                     <p>Vendredi 14 février, nous avons visité le chalet de la famille Dumont situé à Avoriaz. D’un style que l’on pourrait qualifier de forestier, très proche de la nature nous retrouvons immédiatement le chalet dans sa nature la plus «primaire».</p>
-                    <a href="#">SUITE<img src="img/suite.png"></a>
+                    <a class="fadein" href="article.html">SUITE<img src="img/suite.png"></a>
                 </div>
-                <div class="col-lg-4 article post index">
+                <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 article post index">
                     <img src="img/art5.png" width="100%">
                     <h1>Visite Avoriaz</h1>
                     <p>Vendredi 14 février, nous avons visité le chalet de la famille Dumont situé à Avoriaz. D’un style que l’on pourrait qualifier de forestier, très proche de la nature nous retrouvons immédiatement le chalet dans sa nature la plus «primaire».</p>
-                    <a href="#">SUITE<img src="img/suite.png"></a>
+                    <a class="fadein" href="article.html">SUITE<img src="img/suite.png"></a>
                 </div>
-                <div class="col-lg-4 article post index">
+                <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 article post index">
                   <img src="img/art6.png" width="100%">
                     <h1>Visite Avoriaz</h1>
                     <p>Vendredi 14 février, nous avons visité le chalet de la famille Dumont situé à Avoriaz. D’un style que l’on pourrait qualifier de forestier, très proche de la nature nous retrouvons immédiatement le chalet dans sa nature la plus «primaire».</p>
-                    <a href="#">SUITE<img src="img/suite.png"></a>
+                    <a class="fadein" href="article.html">SUITE<img src="img/suite.png"></a>
                 </div>
-                <div class="col-lg-4 article post index">
+                <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 article post index">
                   <img src="img/art4.png" width="100%">
                     <h1>Visite Avoriaz</h1>
                     <p>Vendredi 14 février, nous avons visité le chalet de la famille Dumont situé à Avoriaz. D’un style que l’on pourrait qualifier de forestier, très proche de la nature nous retrouvons immédiatement le chalet dans sa nature la plus «primaire».</p>
-                    <a href="#">SUITE<img src="img/suite.png"></a>
+                    <a class="fadein" href="article.html">SUITE<img src="img/suite.png"></a>
                 </div>
             </div>
         </div>
-        <div class="col-lg-12 center index">
+        <div class="col-lg-12 center indexmax">
             <p>Retrouvez nos articles</p>
-                <button type="button" class="btn btn-secondary-outline">Test</button>
-                <button type="button" class="btn btn-secondary-outline">Dossier</button>
-                <button type="button" class="btn btn-secondary-outline">Article</button>
+                <button type="button" class="btn btn-secondary-outline"><a class="fadein" href="rubrique.html">Test</a></button>
+                <button type="button" class="btn btn-secondary-outline"><a class="fadein" href="rubrique.html">Dossier</a></button>
+                <button type="button" class="btn btn-secondary-outline"><a class="fadein" href="rubrique.html">Article</a></button>
         </div>
     </div>
     <div class="video">
@@ -148,6 +172,7 @@
   <!-- Interviews -->
 
     <div class="bg-grey">
+      <div id="ancreinterview" style="position:absolute;"></div>
         <div id="anchor-interview" class="title-article">
             <h1>Interviews,</h1>
         </div>
@@ -155,61 +180,61 @@
         <div class="grid container interview">
             <div id="posts">
                 <div class="row">
-                    <div class="col-lg-6 article top">
+                    <div class="fixresize">
+                    <div class="col-lg-6 col-md-6 col-sm-6 article top">
                         <p class="maj">P</p>
                         <p class="rotate">Créateur</p>
                         <img src="img/starck.jpg" width="80%">
                         <h1>Philippe Starck.</h1>
                         <p>Designer néerlandais né à Boxtel aux Pays-Bas. Diplômé de l’école d’art de Arnhem en 1988. Mondialement connu pour sa chaise Knotted Chair il a monté son sa propre société Moooi.</p>
                     </div>
-                    <div class="col-lg-6 article">
+                    <div class="col-lg-6 col-md-6 col-sm-6 article">
                         <p class="maj">M</p>
                         <p class="rotate">Designer</p>
                         <img src="img/wanders.jpg" width="80%">
                         <h1>Marcel Wanders.</h1>
                         <p>Designer néerlandais né à Boxtel aux Pays-Bas. Diplômé de l’école d’art de Arnhem en 1988. Mondialement connu pour sa chaise Knotted Chair il a monté son sa propre société Moooi.</p>
                     </div>
-                    <div class="col-lg-6 article top">
+                    <div class="col-lg-6 col-md-6 col-sm-6 article top">
                         <p class="maj2">M</p>
                         <p class="rotate">Designer</p>
                         <img src="img/newson.jpg" width="80%">
                         <h1>Marc Newson.</h1>
                         <p>Designer néerlandais né à Boxtel aux Pays-Bas. Diplômé de l’école d’art de Arnhem en 1988. Mondialement connu pour sa chaise Knotted Chair il a monté son sa propre société Moooi.</p>
                     </div>
-                    <div class="col-lg-6 article">
+                    <div class="col-lg-6 col-md-6 col-sm-6 article">
                         <p class="maj2">R</p>
                         <p class="rotate">Designer</p>
                         <img src="img/legrove.jpg" width="80%">
                         <h1>Ross Legrove.</h1>
                         <p>Spécialisé dans le design industriel, il étudie au Royal College Art de Londres. La poursuite de nouvelles formes touchent l’âme de ceux qui l’utilisent l’encrant ainsi dans le XXIe siècle.</p>
                     </div>
+                  </div>
                 </div>
             </div>
             <div class="col-lg-12 center" id="top">
                 <p>Retrouvez nos interviews</p>
-                <button type="button" class="btn btn-secondary-outline">Interviews</button>
+                <button type="button" class="btn btn-secondary-outline"><a class="fadein" href="rubrique.html">Interviews</a></button>
             </div>
         </div>
     </div>
 
   <!-- End Interviews -->
   <div class="bg-white">
+    <div id="ancrecontact" style="position:absolute;"></div>
     <div id="anchor-contact" class="title-article">
-        <h1>Team,</h1>
+        <h1>Contact,</h1>
     </div>
     <div class="grid container">
         <div id="posts">
             <div class="row contact">
-                <div class="col-lg-12" id="teampic">
-                    <img src="img/lol.png">
-                </div>
                 <p>
                     HomeTain, s'impose comme une presse en ligne,<br />
                     Le chalet étant l'unique sujet telle est la consigne.<br />
                     C'est avec notre inconmensurable passion,<br />
                     Que nous partageons avec vous ces créations.
                 </p>
-                <h1>Contact</h1>
+                <h1>Formulaire</h1>
             </div>
         </div>
         <form method="post" action="index.html" class="cbp-mc-form">
@@ -227,40 +252,42 @@
         </div>
     </div>
   </div>
-    <footer>
-        <div class="footer container">
-            <div class="row">
-                <div class="col-lg-4 post">
-                    <h1>Contact us</h1>
-                    <p>
-                        contact@hometain.com<br />
-                        Boulevard Descartes<br />
-                        77420 Noisy-Champs<br />
-                        FRANCE
-                    </p>
-                </div>
-                <div class="col-lg-4 post" id="paddtop">
-                    <p>
-                        The moutain is your new home
-                    </p>
-                </div>
-                <div class="col-lg-4 post">
-                    <h1>Get the updates</h1>
-                    <p>Join the newsletter</p>
-                    <form method="post" action="index.html" class="cbp-mc-form2">
-                        <div id="center-form">
-                            <div id="mail">
-                                <input type="text" id="email" name="mail" placeholder="E-mail">
-                            </div>
-                        </div>
-                    </form>
-                </div>
-                <div class="col-lg-12 center">
-                    <img src="img/logo.png" height ="100px">
-                </div>
-            </div>
-        </div>
-    </footer>
+  <footer>
+      <div class="footer container">
+          <div class="row">
+              <div class="col-lg-4 col-md-4 col-xs-6 post">
+                  <h1>Contact us</h1>
+                  <p>
+                      contact@hometain.com<br />
+                      Boulevard Descartes<br />
+                      77420 Noisy-Champs<br />
+                      FRANCE
+                  </p>
+              </div>
+              <div class="col-lg-4 col-md-4 post hidd" id="paddtop">
+                  <p>
+                      The moutain is your new home
+                  </p>
+              </div>
+              <div class="col-lg-4 col-md-4 col-xs-6 post">
+                  <h1>Get the updates</h1>
+                  <p>Join the newsletter</p>
+                  <form method="post" action="index.html" class="cbp-mc-form2">
+                      <div id="center-form">
+                          <div id="mail">
+                              <input type="text" id="email" name="mail" placeholder="E-mail">
+                          </div>
+                      </div>
+                  </form>
+              </div>
+              <div class="col-lg-12 col-md-12 col-xs-12 center">
+                  <img src="img/logo.png" height ="100px">
+              </div>
+          </div>
+      </div>
+  </footer>
+
+
     <!-- scripts -->
     <script>
     	$(document).ready(function() {
