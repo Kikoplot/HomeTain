@@ -181,7 +181,7 @@ width: 30px;
 }
 
 video {
-	margin-top: -100%;
+	margin-top: -55%;
 	width: 100%;
 	z-index: -100;
 	opacity: 0.7;
@@ -364,6 +364,13 @@ button a {
 	font-size: 140px;
 	padding-left: 50px;
 	position: absolute;
+}
+
+.title-about h1 {
+	font-size: 140px;
+	text-transform: uppercase;
+	font-family: ProximaNova-Extrabold;
+	color: rgba(0,0,0,0.9);
 }
 
 .top {
@@ -892,6 +899,38 @@ img#abs-article2 {
 	margin: -205px 0px 0px -50px;
 }
 
+.textalignright {
+	text-align: right;
+}
+
+.clients {
+	border: solid 1px;
+}
+
+.manifeste {
+	text-align: center;
+	padding-bottom: 150px;
+}
+
+.manifeste img {
+	margin: 20px 10px;
+	transition: 0.7s;
+	opacity: 0.5;
+}
+
+.manifeste img:hover {
+	transition: 0.7s;
+	opacity: 1;
+}
+
+.manifeste h1 {
+	font-size: 100px;
+	font-family: ProximaNova-Extrabold;
+	color: rgba(0, 0, 0, 0.9);
+	padding-top: 50px;
+	padding-bottom: 50px;
+}
+
 .textright h2 {
 	font-family: ProximaNova-Extrabold;
 	font-size: 30px;
@@ -937,7 +976,7 @@ img#abs-article2 {
 	margin: 15px 0;
 	list-style: none;
 	float: left;
-	width: 33%;
+	width: 25%;
 	text-align: center;
 }
 
@@ -1084,6 +1123,23 @@ transition: 0.7s;
 		width: 100%;
 }
 
+.jq h1 {
+	padding-top: 35px;
+	font-family: ProximaNova-Extrabold;
+	font-size: 30px;
+}
+
+.jq h2 {
+	font-size: 20px;
+	font-family: ProximaNova-Extrabold;
+	margin-top: 0px;
+}
+
+.jq p {
+	font-size: 17px;
+	letter-spacing: 1px;
+}
+
 #test,
 #test2 {
 	position: absolute;
@@ -1137,6 +1193,11 @@ transition: 0.7s;
 }
 
 @media (max-width: 994px) {
+
+	ul#social {
+		display: none;
+	}
+
 	.imgright {
 		text-align: center;
 	}
@@ -1278,6 +1339,11 @@ transition: 0.7s;
 	.top {
 		top: 0px;
 	}
+
+	.choice ul li {
+		width: 50%;
+	}
+
 }
 
 @media (min-width: 768px) {
