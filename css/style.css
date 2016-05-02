@@ -617,6 +617,18 @@ ul#social {
 	padding-top: 13px;
 }
 
+#sb-search {
+margin-left: 300px;
+float: right;
+padding-top: 0px;
+}
+
+@media (max-width: 1200px) {
+	#sb-search {
+		margin-left: 100px;
+	}
+}
+
 ul#social li a {
 	padding: 10px 20px;
 	opacity: 0.4;
@@ -1195,6 +1207,10 @@ transition: 0.7s;
 @media (max-width: 994px) {
 
 	ul#social {
+		display: none;
+	}
+
+	.sb-search{
 		display: none;
 	}
 

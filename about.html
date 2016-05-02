@@ -18,6 +18,7 @@
 
     <!-- Custom CSS -->
     <link href="css/full-slider.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/component.css" />
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -29,7 +30,7 @@
     <script src="js/jquery.js"></script>
     <script src="js/resize.js"></script>
     <script src="js/moveImg.js"></script>
-
+    <script src="js/modernizr.custom.js"></script>
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
 </head>
@@ -107,6 +108,17 @@
                     <li>
                         <a class="fadein" href="about.html">Contact</a>
                     </li>
+                </ul>
+                <ul class="nav navbar-nav">
+                  <li>
+                    <div id="sb-search" class="sb-search">
+                      <form>
+          							<input class="sb-search-input" placeholder="Enter your search term..." type="text" value="" name="search" id="search">
+          							<input class="sb-search-submit" type="submit" value="">
+          							<span class="sb-icon-search"></span>
+          						</form>
+                    </div>
+                  </li>
                 </ul>
                 <ul class="nav navbar-nav" id="social">
                   <li>
@@ -258,6 +270,12 @@
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
+
+    <script src="js/classie.js"></script>
+    <script src="js/uisearch.js"></script>
+    <script>
+      new UISearch( document.getElementById( 'sb-search' ) );
+    </script>
 
 </body>
 
