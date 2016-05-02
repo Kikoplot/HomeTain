@@ -977,6 +977,35 @@ img#abs-article2 {
 	.navbar {
 		background-color: rgba(0, 0, 0, 0.8);
 	}
+	.title-article h1 {
+		width: 100%;
+		text-align: center;
+		font-size: 50px;
+		padding-left: 0;
+	}
+}
+
+@media (max-width: 1080px) {
+	#anchor-interview {
+		position: relative;
+	}
+
+	.bg-grey .title-article h1 {
+		position: relative;
+	}
+
+	.space {
+		display: none;
+	}
+}
+
+@media (max-width: 1280px) {
+	.title-article h1 {
+		font-size: 90px;
+	}
+	.contact p {
+		padding-top: 160px;
+	}
 }
 
 
@@ -1176,6 +1205,24 @@ transition: 0.7s;
 }
 
 @media (max-width: 1200px) {
+
+	.clients {
+    margin-bottom: -10px;
+}
+
+	.title-about h1 {
+		font-size: 100px;
+	}
+
+	.manifeste h1 {
+		font-size: 75px;
+	}
+
+	.manifeste img {
+		width: 30%;
+		height: 30%;
+	}
+
 	.smallcol img {
 		width: 100%;
 	}
@@ -1205,6 +1252,15 @@ transition: 0.7s;
 }
 
 @media (max-width: 994px) {
+	.manifeste h1 {
+		font-size: 55px;
+    padding-top: 30px;
+    padding-bottom: 15px;
+	}
+
+	#menu {
+		display: none;
+	}
 
 	ul#social {
 		display: none;
@@ -1280,9 +1336,40 @@ transition: 0.7s;
 	}
 }
 
+@media (min-width: 769px) {
+	#logoresponsive {
+		display: none;
+	}
+}
+
 @media (max-width: 768px) {
 	.text {
 		height: 189px;
+	}
+
+	.title-about h1 {
+		font-size: 80px;
+	}
+
+	.manifeste img {
+		width: 50%;
+		height: 50%;
+	}
+
+	#logoindexfinal_hype_container {
+		display: none;
+	}
+
+	#logoresponsive {
+		width: 100%;
+		display: block;
+	}
+
+	#logoresponsive img {
+		text-align: center;
+		width: 40%;
+		padding-top: 20px;
+		opacity: 0.8;
 	}
 
 	.navbar {
@@ -1365,5 +1452,39 @@ transition: 0.7s;
 @media (min-width: 768px) {
 	.button_container {
 		display: none;
+	}
+}
+
+@media (max-width: 600px) {
+	.title-article h1 {
+		width: 100%;
+		text-align: center;
+		font-size: 50px;
+	}
+
+	.manifeste h1 {
+		font-size: 40px;
+	}
+
+	.padding {
+		padding-top: 85px;
+	}
+
+	.contact p {
+    padding-top: 120px;
+	}
+
+	.maj2 {
+		display: none;
+	}
+}
+
+@media (max-width: 460px) {
+	.manifeste h1 {
+		font-size: 30px;
+	}
+
+	.title-about h1 {
+		font-size: 60px;
 	}
 }
